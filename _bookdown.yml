@@ -1,5 +1,6 @@
-book_filename: "isu-template"
+book_filename: "thesis"
 rmd_files: [
-  "index.Rmd" #,
-  #"Body/ch1/ch1_main.Rmd"
+  "index.Rmd",
+  "Body/ch1/ch1_main.Rmd",
+  "Body/ch2/ch2_main.Rmd"
 ]

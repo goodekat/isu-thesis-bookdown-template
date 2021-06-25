@@ -1,4 +1,7 @@
+\\
+
 \chapter{PAPER 1 TITLE GOES HERE}
+
 \label{polymer_fibers}
 
 \begin{center}
@@ -10,9 +13,9 @@
 This is the text of my abstract that is part of the thesis itself.
 The abstract describes the work in the first paper general. You can use the same abstract as your paper here.
 
-%\pagebreak %remove if needed
+<!-- %\pagebreak %remove if needed -->
 
-% Please include sections as the paper has, some of the following sections are meant as examples of what can be done, the bibliography should be made as given
+<!-- % Please include sections as the paper has, some of the following sections are meant as examples of what can be done, the bibliography should be made as given -->
 
 \section{Overview}
 
@@ -44,8 +47,8 @@ Here one particular part of the hypothesis that is
 currently being explained is examined and particular
 elements of that part are given careful scrutiny.
 
-% Below \subsubsection
-% Sectional commands: \paragraph and \subparagraph may also be used
+<!-- % Below \subsubsection -->
+<!-- % Sectional commands: \paragraph and \subparagraph may also be used -->
 
 \subsection{Second Hypothesis}
 
@@ -66,43 +69,42 @@ leading to a foregone conclusion.
 \section{Conclusion}\label{conclusion}
 
 The conclusion of the paper goes here.
-%\cite{allen}, \cite{bruner} 
+<!-- %\cite{allen}, \cite{bruner}  -->
 \cite{cox}
-% \cite{latex} 
+<!-- % \cite{latex}  -->
 \cite{Ancey1996}, \cite{RR73} 
 \cite{Aup91}, \cite{Dou72} 
-%%%%%%%%
 
-%%%%
-% Reference section comes before the appendix
+<!-- % Reference section comes before the appendix -->
 
-%\bibliographystyle{acm} % use for numbered citations along with options given in preamble. Look at the main thesis.tex file
-\bibliographystyle{apa}
-\bibliography{master_bib}
+<!-- %\bibliographystyle{acm} % use for numbered citations along with options given in preamble. Look at the main thesis.tex file -->
+<!-- \bibliographystyle{apa} -->
+<!-- \bibliography{master_bib} -->
 
-% %\section{Bibliography}
-% \bibliographystyle{apa}
-% % \vspace{-20pt}
-% \begingroup
-%     \setlength{\bibsep}{13.2pt}
-%     \linespread{1}\selectfont
-%     \bibliography{master_bib}
-% \endgroup
-% \clearpage
-% \pagebreak
+<!-- % %\section{Bibliography} -->
+<!-- % \bibliographystyle{apa} -->
+<!-- % % \vspace{-20pt} -->
+<!-- % \begingroup -->
+<!-- %     \setlength{\bibsep}{13.2pt} -->
+<!-- %     \linespread{1}\selectfont -->
+<!-- %     \bibliography{master_bib} -->
+<!-- % \endgroup -->
+<!-- % \clearpage -->
+<!-- % \pagebreak -->
 
-%%%%%
-%% Appendix
-% This section may or may not be included
-% Chapter 2 shows a double appendix example. Please use A or B as in Appendix A if there are multiple appendix. Use "Appendix A:" before writing the title
-% Chapter 3 shows a single appendix example. Use "Appendix:" before writing the title 
+<!-- %%%%% -->
+<!-- %% Appendix -->
+<!-- % This section may or may not be included -->
+<!-- % Chapter 2 shows a double appendix example. Please use A or B as in Appendix A if there are multiple appendix. Use "Appendix A:" before writing the title -->
+<!-- % Chapter 3 shows a single appendix example. Use "Appendix:" before writing the title  -->
+
 \section{Appendix A: Appendix A Title Goes Here After The Colon}
 If there is an appendix that needs to go with the paper it can be as a section \cite{Aup91}
 
 \subsection{Procedure details}
 Details of the paper specific appendix procedures
 
-% This section may or may not be included
+<!-- % This section may or may not be included -->
 
 \section{Appendix B: Appendix B Title Goes Here After The Colon}
 If there is an appendix that needs to go with the paper it can be as a section \cite{Aup91}

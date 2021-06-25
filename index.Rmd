@@ -1,3 +1,32 @@
 --- 
 site: bookdown::bookdown_site
 ---
+
+```{r setup, include = FALSE}
+# Global R options
+options(
+  digits = 3,
+  dplyr.print_min = 6, 
+  dplyr.print_max = 6, 
+  htmltools.dir.version = FALSE,
+  width = 70
+)
+
+# R markdown options
+knitr::opts_chunk$set(
+  cache = FALSE,
+  comment = "#>",
+  collapse = TRUE,
+  dpi = 500,
+  echo = FALSE,
+  error = FALSE,
+  fig.align = "center",
+  fig.keep = 'high',
+  fig.pos = 'tbp!',
+  message = FALSE,
+  warning = FALSE
+)
+  
+# Other options
+knitr::opts_knit$set(eval.after = "fig.cap")
+```
