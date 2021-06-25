@@ -1,7 +1,6 @@
 \chapter{GENERAL CONCLUSION}
 \label{future-work}
 
-
 This is the opening paragraph to my thesis which
 explains in general terms the concepts and hypothesis
 which will be used in my thesis.
@@ -13,7 +12,6 @@ necessary.
 
 Here initial concepts and conditions are explained and
 several hypothesis are mentioned in brief.
-
 
 \subsection{Hypothesis}
 
@@ -43,27 +41,27 @@ currently being explained is examined and particular
 elements of that part are given careful scrutiny. \cite{allen}, \cite{bruner}, \cite{struss}
 
 
-% Below \subsubsection
-% Sectional commands: \paragraph and \subparagraph may also be used
+<!-- % Below \subsubsection -->
+<!-- % Sectional commands: \paragraph and \subparagraph may also be used -->
 
 
-%\section{Criteria Review}
+<!-- %\section{Criteria Review} -->
 
-%Here certain criteria are explained thus eventually
-%leading to a foregone conclusion.
+<!-- %Here certain criteria are explained thus eventually -->
+<!-- %leading to a foregone conclusion. -->
 
-%\bibliographystyle{acm} % use for numbered citations along with options given in preamble. Look at the main thesis.tex file
-\bibliographystyle{apa}
-\bibliography{master_bib}
+<!-- %\bibliographystyle{acm} % use for numbered citations along with options given in preamble. Look at the main thesis.tex file -->
+<!-- \bibliographystyle{apa} -->
+<!-- \bibliography{master_bib} -->
 
-% \section{Bibliography}
+<!-- % \section{Bibliography} -->
 
-% \bibliographystyle{apa}
-% % \vspace{-20pt}
-% \begingroup
-%     \setlength{\bibsep}{13.2pt}
-%     \linespread{1}\selectfont
-%     \bibliography{master_bib}
-% \endgroup
-% \clearpage
-% \pagebreak
+<!-- % \bibliographystyle{apa} -->
+<!-- % % \vspace{-20pt} -->
+<!-- % \begingroup -->
+<!-- %     \setlength{\bibsep}{13.2pt} -->
+<!-- %     \linespread{1}\selectfont -->
+<!-- %     \bibliography{master_bib} -->
+<!-- % \endgroup -->
+<!-- % \clearpage -->
+<!-- % \pagebreak -->

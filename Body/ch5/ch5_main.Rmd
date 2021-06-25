@@ -1,5 +1,5 @@
 \chapter{PAPER 4 TITLE GOES HERE}
-% \label{polymer_fibers1}
+<!-- % \label{polymer_fibers1} -->
 
 \begin{center}
     Authors and Affiliations \\
@@ -10,10 +10,10 @@
 This is the text of my abstract that is part of the thesis itself.
 The abstract describes the work in the first paper general. You can use the same abstract as your paper here.
 
-%\pagebreak %remove if needed
+<!-- %\pagebreak %remove if needed -->
 
-% Please include sections as the paper has, some of the following sections are meant as examples of what can be done, the bibliography should be made as given
-%\section{Overview}
+<!-- % Please include sections as the paper has, some of the following sections are meant as examples of what can be done, the bibliography should be made as given -->
+<!-- %\section{Overview} -->
 
 This is the opening paragraph to my thesis which
 explains in general terms the concepts and hypothesis
@@ -33,7 +33,7 @@ is few and far between.
 \begin{table}[h!tb] \centering
 \isucaption{Moon Data}
 \label{data}
-% Use: \begin{tabular{|lcc|} to put table in a box
+<!-- % Use: \begin{tabular{|lcc|} to put table in a box -->
 \begin{tabular}{lcc} \hline
 \textbf{Element} & \textbf{Control} & \textbf{Experimental} \\ \hline
 Moon Rings & 1.23 & 3.38 \\
@@ -65,8 +65,8 @@ Here one particular part of the hypothesis that is
 currently being explained is examined and particular
 elements of that part are given careful scrutiny.
 
-% Below \subsubsection
-% Sectional commands: \paragraph and \subparagraph may also be used
+<!-- % Below \subsubsection -->
+<!-- % Sectional commands: \paragraph and \subparagraph may also be used -->
 
 \subsection{Second Hypothesis}
 
@@ -90,36 +90,36 @@ leading to a foregone conclusion.
 
 The conclusion of the paper goes here.
 
-%%%%
-% Reference section comes before the appendix
+<!-- %%%% -->
+<!-- % Reference section comes before the appendix -->
 
-%\bibliographystyle{acm} % use for numbered citations along with options given in preamble. Look at the main thesis.tex file
-\bibliographystyle{apa}
-\bibliography{master_bib}
+<!-- %\bibliographystyle{acm} % use for numbered citations along with options given in preamble. Look at the main thesis.tex file -->
+<!-- \bibliographystyle{apa} -->
+<!-- \bibliography{master_bib} -->
 
-% %\section{Bibliography}
-% \bibliographystyle{apa}
-% % \vspace{-20pt}
-% \begingroup
-%     \setlength{\bibsep}{13.2pt}
-%     \linespread{1}\selectfont
-%     \bibliography{master_bib}
-% \endgroup
-% \clearpage
-% \pagebreak
+<!-- % %\section{Bibliography} -->
+<!-- % \bibliographystyle{apa} -->
+<!-- % % \vspace{-20pt} -->
+<!-- % \begingroup -->
+<!-- %     \setlength{\bibsep}{13.2pt} -->
+<!-- %     \linespread{1}\selectfont -->
+<!-- %     \bibliography{master_bib} -->
+<!-- % \endgroup -->
+<!-- % \clearpage -->
+<!-- % \pagebreak -->
 
-%%%%%
-%% Appendix
-% This section may or may not be included
-% Chapter 2 shows a double appendix example. Please use A or B as in Appendix A if there are multiple appendix. Use "Appendix A:" before writing the title
-% Chapter 3 shows a single appendix example. Use "Appendix:" before writing the title 
+<!-- %%%%% -->
+<!-- %% Appendix -->
+<!-- % This section may or may not be included -->
+<!-- % Chapter 2 shows a double appendix example. Please use A or B as in Appendix A if there are multiple appendix. Use "Appendix A:" before writing the title -->
+<!-- % Chapter 3 shows a single appendix example. Use "Appendix:" before writing the title  -->
 \section{Appendix: Appendix title goes here}
 If there is an appendix that needs to go with the paper it can be as a section \cite{Aup91}
 
 \subsection{Procedure details}
 Details of the paper specific appendix procedures
 
-%\cite{allen}, \cite{bruner} 
+<!-- %\cite{allen}, \cite{bruner}  -->
 \cite{Rad87}
 \cite{MOR91}, \cite{Lom73} 
 \cite{Lom91}, \cite{Lom92} 
