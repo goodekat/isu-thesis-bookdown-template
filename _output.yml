@@ -2,3 +2,6 @@ bookdown::pdf_book:
   template: "template.tex"
   keep_tex: yes
   citation_package: "natbib"
+  natbiboptions: 
+    - "sectionbib"
+    - "chapterbib"
