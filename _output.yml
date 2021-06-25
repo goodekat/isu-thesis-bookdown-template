@@ -1,0 +1,4 @@
+bookdown::pdf_book:
+  template: "thesis.tex"
+  keep_tex: yes
+  #citation_package: "natbib"
