@@ -1,0 +1,5 @@
+book_filename: "isu-template"
+rmd_files: [
+  "index.Rmd" #,
+  #"Body/ch1/ch1_main.Rmd"
+]
