@@ -1,5 +1,13 @@
 --- 
 site: bookdown::bookdown_site
+output:
+  bookdown::pdf_book:
+    includes:
+      in_header: preamble.tex
+      before_body: pref.tex
+      after_body: after.tex
+    keep_tex: yes
+    citation_package: biblatex
 documentclass: isuthesis
 classoption:
   - notitlepage
@@ -15,6 +23,7 @@ fontsize: 12pt
 toc: False
 # link-citations: yes
 ---
+
 <!-- # biblatexoptions: [refsegment=chapter] -->
 
 <!--  backref=true, style=authoryear, natbib=true, style=numeric-comp] -->
