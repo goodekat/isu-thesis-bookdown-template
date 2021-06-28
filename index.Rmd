@@ -1,6 +1,27 @@
 --- 
 site: bookdown::bookdown_site
+documentclass: isuthesis
+classoption:
+  - notitlepage
+fontsize: 12pt
+# bibliography: masterbib.bib
+# biblio-style: apa
+# nocite: '@*'
+# biblatexoptions: [refsegment=chapter]
+# biblatexoptions: [refsection=chapter, backref=false]
+# , hyperref=true, backref=FALSE, backend=biber, 
+#   bibencoding=utf8]
+  # , style=authoryear, natbib=true, style=numeric-comp]
+toc: False
+# link-citations: yes
 ---
+<!-- # biblatexoptions: [refsegment=chapter] -->
+
+<!--  backref=true, style=authoryear, natbib=true, style=numeric-comp] -->
+
+```{r echo=FALSE}
+Sys.setenv(RSTUDIO_PDFLATEX = "latexmk")
+```
 
 ```{r setup, include = FALSE}
 # Global R options
@@ -29,4 +50,10 @@ knitr::opts_chunk$set(
   
 # Other options
 knitr::opts_knit$set(eval.after = "fig.cap")
+
+
+
+
 ```
+
+

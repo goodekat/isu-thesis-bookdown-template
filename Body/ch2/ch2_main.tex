@@ -1,0 +1,152 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+\chapter{PAPER 1 TITLE GOES HERE}
+
+\label{polymer_fibers}
+
+\begin{center}
+    Authors and Affiliations \\
+    Modified from a manuscript to be submitted to/ under review/ published in \textit{Name of the Journal} 
+\end{center}
+
+\section{Abstract}
+
+This is the text of my abstract that is part of the thesis itself. The
+abstract describes the work in the first paper general. You can use the
+same abstract as your paper here.
+
+\section{Overview}
+
+The construct of this section or any further section is same as the
+authors paper. This is the opening paragraph to my thesis which explains
+in general terms the concepts and hypothesis which will be used in my
+thesis.
+
+With more general information given here than really necessary.
+
+\section{Introduction}
+
+Here initial concepts and conditions are explained and several
+hypothesis are mentioned in brief.
+
+\cite{allen}, \cite{bruner} and \cite{cox} did the initial work in this
+area. But in Struss' work {[}\cite{struss}{]} the definitive model is
+seen.
+
+\subsection{Hypothesis}
+
+Here one particular hypothesis is explained in depth and is examined in
+the light of current literature.
+
+\subsubsection{Parts of the hypothesis}
+
+Here one particular part of the hypothesis that is currently being
+explained is examined and particular elements of that part are given
+careful scrutiny.
+
+\subsection{Second Hypothesis}
+
+Here one particular hypothesis is explained in depth and is examined in
+the light of current literature.
+
+\subsubsection{Parts of the second hypothesis}
+
+Here one particular part of the hypothesis that is currently being
+explained is examined and particular elements of that part are given
+careful scrutiny.
+
+\section{Criteria Review}
+
+Here certain criteria are explained thus eventually leading to a
+foregone conclusion.
+
+\section{Conclusion}\label{conclusion}
+
+The conclusion of the paper goes here. \cite{cox} \cite{Ancey1996},
+\cite{RR73} \cite{Aup91}, \cite{Dou72}
+
+\bibliographystyle{apa}
+\bibliography{master_bib}
+
+\section{Appendix A: Appendix A Title Goes Here After The Colon}
+
+If there is an appendix that needs to go with the paper it can be as a
+section \cite{Aup91}
+
+\subsection{Procedure details}
+
+Details of the paper specific appendix procedures
+
+\section{Appendix B: Appendix B Title Goes Here After The Colon}
+
+If there is an appendix that needs to go with the paper it can be as a
+section \cite{Aup91}
+
+\subsection{Procedure details}
+
+Details of the paper specific appendix procedures
+
+\end{document}

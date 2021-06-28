@@ -1,5 +1,3 @@
-\\
-
 \chapter{PAPER 1 TITLE GOES HERE}
 
 \label{polymer_fibers}
@@ -69,34 +67,21 @@ leading to a foregone conclusion.
 \section{Conclusion}\label{conclusion}
 
 The conclusion of the paper goes here.
-<!-- %\cite{allen}, \cite{bruner}  -->
 \cite{cox}
-<!-- % \cite{latex}  -->
-\cite{Ancey1996}, \cite{RR73} 
-\cite{Aup91}, \cite{Dou72} 
+
 
 <!-- % Reference section comes before the appendix -->
 
 <!-- %\bibliographystyle{acm} % use for numbered citations along with options given in preamble. Look at the main thesis.tex file -->
 <!-- \bibliographystyle{apa} -->
-<!-- \bibliography{master_bib} -->
+<!-- \bibliography{masterbib} -->
+<!-- \printbibliography -->
+<!-- \printbibliography[segment=\therefsegment] -->
+<!-- \printbibliography[segment=\therefsegment,heading=subbibliography] -->
 
-<!-- % %\section{Bibliography} -->
-<!-- % \bibliographystyle{apa} -->
-<!-- % % \vspace{-20pt} -->
-<!-- % \begingroup -->
-<!-- %     \setlength{\bibsep}{13.2pt} -->
-<!-- %     \linespread{1}\selectfont -->
-<!-- %     \bibliography{master_bib} -->
-<!-- % \endgroup -->
-<!-- % \clearpage -->
-<!-- % \pagebreak -->
+\section{References}
+\printbibliography[heading=none, section=\therefsection]
 
-<!-- %%%%% -->
-<!-- %% Appendix -->
-<!-- % This section may or may not be included -->
-<!-- % Chapter 2 shows a double appendix example. Please use A or B as in Appendix A if there are multiple appendix. Use "Appendix A:" before writing the title -->
-<!-- % Chapter 3 shows a single appendix example. Use "Appendix:" before writing the title  -->
 
 \section{Appendix A: Appendix A Title Goes Here After The Colon}
 If there is an appendix that needs to go with the paper it can be as a section \cite{Aup91}

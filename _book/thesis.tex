@@ -1,34 +1,126 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  12pt,
+  notitlepage]{isuthesis}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
 % Template file for a standard thesis
-\documentclass[11pt,notitlepage]{isuthesis}
+% \documentclass[11pt,notitlepage]{isuthesis}
 % notitlepage is used because \begin{abstract} uses titlepage by default, which resets the page numbers
 
-\usepackage[pdftex]{graphicx}
+% \usepackage{pdflatex]
+% \usepackage[pdftex]{graphicx}
 % Standard, old-style thesis
-\usepackage{isutraditional}   
+\usepackage{isutraditional}
 \chaptertitle
 % Old-style, thesis numbering down to subsubsection
 \alternate
-\usepackage{rotating}
+% \usepackage{rotating}
 % Bibliography without numbers or labels
 %\usepackage{natbib}
 % Use the following line if you want square brackets and numbering system
 %\usepackage[square, numbers]{natbib}
 
-\usepackage[sectionbib]{natbib}
-\renewcommand{\bibfont}{\setstretch{1}\selectfont}
-\setlength{\bibsep}{13.2pt}
-\usepackage{chapterbib}
+% $if(natbib)$
+% \usepackage{chapterbib}
+% \usepackage{natbib}
+% \usepackage[$natbiboptions$]{natbib}
+% \usepackage[sectionbib]{natbib}
+
+%%%%%%%%%%%%%WORKS
+\usepackage[backend=biber, bibencoding=utf8, refsection=chapter, style=apa, natbib=true, backref=false, style=apa]{biblatex}
+
+\addbibresource{masterbib.bib}
+
+% \usepackage[sectionbib]{chapterbib}
+% \renewcommand{\bibfont}{\setstretch{1}\selectfont}
+% \setlength{\bibsep}{13.2pt}
+
+% \bibliographystyle{apa}
+% \bibliography{master_bib}
+% \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
+% $endif$
+
+% \usepackage[sectionbib]{natbib}
+% \renewcommand{\bibfont}{\setstretch{1}\selectfont}
+% \setlength{\bibsep}{13.2pt}
+% \usepackage{chapterbib}
 
 %\usepackage{chapterbib}
 %\renewcommand\bibsection{\section*{\ref name}}
 %\renewcommand\bibsection{\section*}
-\renewcommand{\bibsection}{\section{References}}
+
+% \renewcommand{\bibsection}{\section{References}}
 
 %\bibliographystyle{apa}  % changed from apa, abbrv, unsrtnat
 %\includeonly{titletoc,chapter1}
 %Optional Package to add PDF bookmarks and hypertext links
-\usepackage[pdftex,hypertexnames=false,linktocpage=true]{hyperref}
-\hypersetup{colorlinks=true,linkcolor=blue,anchorcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue,bookmarksnumbered=true,pdfview=FitB}
+
+% \usepackage[pdfLatex,hypertexnames=false,linktocpage=true]{hyperref}
+% \usepackage[pdfLatex,hypertexnames=false,linktocpage=true]{hyperref}
+% \hypersetup{colorlinks=true,linkcolor=blue,anchorcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue,bookmarksnumbered=true,pdfview=FitB}
 
 %\usepackage{titletoc}
 \usepackage{hyperref}
@@ -103,8 +195,14 @@
 
 \usepackage{amssymb}
 \usepackage[intoc, english]{nomencl}
+\usepackage[]{biblatex}
+
+\author{}
+\date{\vspace{-2.5em}}
 
 \begin{document}
+
+%\begin{document}
 \DeclareGraphicsExtensions{.jpg,.pdf,.mps,.png}
 %\begin{singlespace}
 \def\@makechapterheada{\vspace*{-2cm}\titlepage} % in order to reduce the space between margin and heading in titlepage
@@ -156,10 +254,86 @@
 \newpage
 \pagenumbering{arabic}
 
+\clearpage
+\pagebreak
 % Create body using the info from _bookdown.yml
-%\textbackslash{}
+%$body$
+% \bibliography{master_bib}
+%\include{Body/ch1/ch1_main}
+%\include{Body/ch2/ch2_main}
+%\include{Body/ch3/ch3_main}
+%\include{Body/ch4/ch4_main}
+%\include{Body/ch5/ch5_main}
+%\include{Body/ch6/ch6_future_and_conclusions}
+
+%%%%%% bibliographies
+% \addbibresource{masterbib.bib}
+
+% \clearpage
+% \nocite{*}
+%\unappendixtitle
+%\newpage
+%% % \phantomsection
+%\addcontentsline{toc}{chapter}{BIBLIOGRAPHY}
+%\section*{BIBLIOGRAPHY}
+%\bibliographystyle{apa}
+%\vspace{-20pt}
+%\begingroup
+%    \setlength{\bibsep}{14.5pt}
+%    \linespread{1}\selectfont
+%    \bibliography{master_bib}
+%\endgroup
+
+% Renders the citations but does not show the bibliography at the end of the thesis
+%\newsavebox\mytempbib
+%\savebox\mytempbib{\parbox{\textwidth}{\bibliography{master_bib}}}
+
+% \clearpage
+% \pagebreak
+% \nobibliography{masterbib.bib}
+% \printbibliography[heading=none]
+
+%% Only within chapter appendix is allowed for Journal style writing
+%\include{Appendix/appendix1} % Instruction for single appendix look below
+%\include{Appendix/appendix2}
+%\end{document}
+
+% use \isucaption{} for all captions of figures and tables, where the captions are not too long.
+
+% Use \isucaption[]{} with the square brackets for short caption of figure or table that goes into the list of tables and list of figures, and the curly brackets can have long captions which go with the figure/ table.
+
+% IMPORTANT NOTES
+% TABLE OF CONTENTS :
+% TOPIC 1:  If you need a page break follow the steps below
+% step1
+% check before which chapter in the table of contents you want a page break
+% step 2
+% go the folder "body". There open the chapter tex file that you noted needed page break in the table of contents..
+% step 3
+% insert  \addtocontents{toc}{\protect\newpage} before the first line i.e. before the line \chapter{RESULTS}.
+
+%%%%%%%%%%%%%%
+% use \isucaption{} for all captions of figures and tables, where the captions are not too long.
+
+% Use \isucaption[]{} with the square brackets for short caption of figure or table that goes into the list of tables and list of figures, and the curly brackets can have long captions which go with the figure/ table.
+
+%%%%%% Using sub figures 
+% %%% In preamble include : \usepackage{subfig}
+% \begin{figure}[htbp]
+% 	\centering
+% 	\subfloat[first caption.\label{fig:2a}]{\includegraphics[width=0.2\textwidth]{Images/dc5.jpg}}\hfill
+%     \subfloat[second caption.\label{fig:2b}] {\includegraphics[width=0.2\textwidth]{Images/dc5.jpg}}\hfill
+% 	\isucaption{Sub-figure test}
+% 	\label{fig:subfigure-test}
+% \end{figure}
+
+% Subfloat reference: Fig \ref{fig:2a}
+
+% Figure reference: Fig \ref{fig:subfigure-test}
 
 \chapter{GENERAL INTRODUCTION}
+
+\label{general_fibers}
 
 This chapter will have the introduction to your thesis as a whole.
 
@@ -170,7 +344,7 @@ which will be used in my thesis.
 With more general information given here than really
 necessary.
 
-\begin{center}\includegraphics{thesis_files/figure-latex/unnamed-chunk-1-1} \end{center}
+\begin{center}\includegraphics{thesis_files/figure-latex/unnamed-chunk-2-1} \end{center}
 
 \section{Overview}
 
@@ -198,17 +372,16 @@ and is examined in the light of current literature.
 Here one particular part of the hypothesis that is
 currently being explained is examined and particular
 elements of that part are given careful scrutiny
-\cite{allen}, \cite{bruner}, \cite{prime-number-theorem} abcd.
+\cite{allen}, \cite{bruner}
 
 \section{Criteria Review}
 
 Here certain criteria are explained thus eventually
 leading to a foregone conclusion.
 
-\bibliographystyle{apa}
-\bibliography{master_bib}
+\section{References}
 
-\textbackslash{}
+\printbibliography[heading=none, section=\therefsection]
 
 \chapter{PAPER 1 TITLE GOES HERE}
 
@@ -274,8 +447,9 @@ leading to a foregone conclusion.
 
 The conclusion of the paper goes here.
 \cite{cox}
-\cite{Ancey1996}, \cite{RR73}
-\cite{Aup91}, \cite{Dou72}
+
+\section{References}
+\printbibliography[heading=none, section=\therefsection]
 
 \section{Appendix A: Appendix A Title Goes Here After The Colon}
 
@@ -293,389 +467,9 @@ If there is an appendix that needs to go with the paper it can be as a section \
 
 Details of the paper specific appendix procedures
 
-\chapter{PAPER 2 TITLE GOES HERE}
-
-\begin{center}
-    Authors and Affiliations \\
-    Modified from a manuscript to be submitted to/ under review/ published in \textit{Name of the Journal} 
-\end{center}
-
-\section{Abstract}
-
-This is the text of my abstract that is part of the thesis itself.
-The abstract describes the work in the first paper general. You can use the same abstract as your paper here.
-
-\section{Overview}
-
-The construct of this section or any further section is same as the authors paper.
-This is the opening paragraph to my thesis which
-explains in general terms the concepts and hypothesis
-which will be used in my thesis.
-
-With more general information given here than really
-necessary.
-
-\section{Introduction}
-
-Here initial concepts and conditions are explained and
-several hypothesis are mentioned in brief.
-
-\cite{allen}, \cite{bruner} and \cite{cox}
-did the initial work in this area. But in Struss' work {[}\cite{struss}{]}
-the definitive model is seen.
-
-\subsection{Hypothesis}
-
-Here one particular hypothesis is explained in depth
-and is examined in the light of current literature.
-
-\subsubsection{Parts of the hypothesis}
-
-Here one particular part of the hypothesis that is
-currently being explained is examined and particular
-elements of that part are given careful scrutiny.
-
-\subsection{Second Hypothesis}
-
-Here one particular hypothesis is explained in depth
-and is examined in the light of current literature.
-
-\subsubsection{Parts of the second hypothesis}
-
-Here one particular part of the hypothesis that is
-currently being explained is examined and particular
-elements of that part are given careful scrutiny.
-
-\addtocontents{toc}{\protect\newpage}
-
-\%\% Remove this if needed, this lines forces the lines of the TOC starting with the below sub-heading ``Critical Review'' to go to the next page. Remove this formatting line as it will be required only if you want to force a table of contents entry to the next page along with the other subsequent entries.
-
-\section{Criteria Review}
-
-Here certain criteria are explained thus eventually
-leading to a foregone conclusion.
-
-\section{Conclusion}\label{Conclusion1}
-
-The conclusion of the paper goes here.
-
-\cite{allen}, \cite{bruner},
-\cite{Hal82},
-\cite{Rud73}, \cite{Con90},
-\cite{Con78}, \cite{KR83},
-\cite{KR86}
-
-\section{Appendix: Appendix Title Goes Here}
-
-If there is an appendix that needs to go with the paper it can be as a section \cite{Aup91}
-
-\subsection{Procedure details}
-
-Details of the paper specific appendix procedures
-
-\chapter{PAPER 3 TITLE GOES HERE}
-
-\begin{center}
-    Authors and Affiliations \\
-    Modified from a manuscript to be submitted to/ under review/ published in \textit{Name of the Journal} 
-\end{center}
-
-\section{Abstract}
-
-This is the text of my abstract that is part of the thesis itself.
-The abstract describes the work in the first paper general. You can use the same abstract as your paper here.
-
-\section{Methods and procedures}
-
-This is the opening paragraph to my thesis which
-explains in general terms the concepts and hypothesis
-which will be used in my thesis.
-
-With more general information given here than really
-necessary.
-
-\section{Introduction}
-
-Here initial concepts and conditions are explained and
-several hypothesis are mentioned in brief.
-
-As can be seen in Table\textasciitilde{}\ref{nothing} it is truly
-obvious what I am saying is true.
-
-\begin{table}[h!tb] \centering
-\isucaption[This table shows a standard empty table. Please check the code caption for extended instructions]{This table shows a standard empty table. In case of long captions, we want to use the long caption as the description to the table and image but not use it in the table of contents and list of figures/ tables. In order to do this, there are two captions which have been provided, remove the first square bracket options if there is only one small caption. You can use citations like this too \cite{Enf87}}
-\label{nothing}
-
-\vspace{ 2 in}
-\end{table}
-
-\subsection{Hypothesis}
-
-Here one particular hypothesis is explained in depth
-and is examined in the light of current literature.
-
-This can also be seen in Figure\textasciitilde{}\ref{moon} that the
-rest is obvious.
-
-\begin{figure}[h!tb] \centering
-
-\vspace{ 2 in}
-\isucaption{This table shows a standard empty figure}
-\label{moon}
-\end{figure}
-
-\subsubsection{Parts of the hypothesis}
-
-Here one particular part of the hypothesis that is
-currently being explained is examined and particular
-elements of that part are given careful scrutiny.
-
-\subsection{Second Hypothesis}
-
-Here one particular hypothesis is explained in depth
-and is examined in the light of current literature.
-
-\subsubsection{Parts of the second hypothesis}
-
-Here one particular part of the hypothesis that is
-currently being explained is examined and particular
-elements of that part are given careful scrutiny.
-
-Here certain criteria are explained thus eventually
-leading to a foregone conclusion as can be seen in
-Table \ref{nevermore}.
-
-\begin{table}[h!tb] \centering
-\setlength{\captionwidth}{3.5 in}
-\isucaption{This table shows a standard empty table with a limited caption width}
-\label{nevermore}
-
-\vspace{ 2 in}
-\end{table}
-
-\section{Results}
-
-Include any results
-
-\section{Conclusion}\label{conclusion2}
-
-The conclusion of the paper goes here.
-
-\cite{Rea85}
-\cite{Enf87}, \cite{Dau75}
-\cite{KPS75}
-
-\section{Appendix: Appendix Title Goes Here}
-
-If there is an appendix that needs to go with the paper it can be as a section \cite{Aup91}
-
-\subsection{Procedure details}
-
-Details of the paper specific appendix procedures
-
-\chapter{PAPER 4 TITLE GOES HERE}
-
-\begin{center}
-    Authors and Affiliations \\
-    Modified from a manuscript to be submitted to/ under review/ published in \textit{Name of the Journal} 
-\end{center}
-
-\section{Abstract}
-
-This is the text of my abstract that is part of the thesis itself.
-The abstract describes the work in the first paper general. You can use the same abstract as your paper here.
-
-This is the opening paragraph to my thesis which
-explains in general terms the concepts and hypothesis
-which will be used in my thesis.
-
-With more general information given here than really
-necessary.
-
-\section{Introduction}
-
-Here initial concepts and conditions are explained and
-several hypothesis are mentioned in brief.
-
-Of course, data on this as seen in Table\textasciitilde{}\ref{data}
-is few and far between.
-
-\begin{table}[h!tb] \centering
-\isucaption{Moon Data}
-\label{data}
-<!-- % Use: \begin{tabular{|lcc|} to put table in a box -->
-\begin{tabular}{lcc} \hline
-\textbf{Element} & \textbf{Control} & \textbf{Experimental} \\ \hline
-Moon Rings & 1.23 & 3.38 \\
-Moon Tides & 2.26 & 3.12 \\
-Moon Walk & 3.33 & 9.29 \\ \hline
-\end{tabular}
-\end{table}
-
-\subsection{Hypothesis}
-
-Here one particular hypothesis is explained in depth
-and is examined in the light of current literature.
-
-Or graphically as seen in Figure\textasciitilde{}\ref{mgraph}
-it is certain that my hypothesis is true.
-
-\begin{figure}[h!tb] \centering
-
-\includegraphics{Images/dc5}
-
-\isucaption{Durham Centre}
-\label{mgraph}
-\end{figure}
-
-\subsubsection{Parts of the hypothesis}
-
-Here one particular part of the hypothesis that is
-currently being explained is examined and particular
-elements of that part are given careful scrutiny.
-
-\subsection{Second Hypothesis}
-
-Here one particular hypothesis is explained in depth
-and is examined in the light of current literature.
-
-\subsubsection{Parts of the second hypothesis}
-
-Here one particular part of the hypothesis that is
-currently being explained is examined and particular
-elements of that part are given careful scrutiny.
-
-\section{Criteria Review}
-
-Here certain criteria are explained thus eventually
-leading to a foregone conclusion.
-
-\section{Results}
-
-\section{Conclusion}\label{conclusion3}
-
-The conclusion of the paper goes here.
-
-\section{Appendix: Appendix title goes here}
-
-If there is an appendix that needs to go with the paper it can be as a section \cite{Aup91}
-
-\subsection{Procedure details}
-
-Details of the paper specific appendix procedures
-
-\cite{Rad87}
-\cite{MOR91}, \cite{Lom73}
-\cite{Lom91}, \cite{Lom92}
-\cite{dB59}
-
-\chapter{GENERAL CONCLUSION}
-\label{future-work}
-
-This is the opening paragraph to my thesis which
-explains in general terms the concepts and hypothesis
-which will be used in my thesis.
-
-With more general information given here than really
-necessary.
-
-\section{Summary And Discussion}
-
-Here initial concepts and conditions are explained and
-several hypothesis are mentioned in brief.
-
-\subsection{Hypothesis}
-
-Here one particular hypothesis is explained in depth
-and is examined in the light of current literature.
-
-As can be seen in Table\textasciitilde{}\ref{nothingelse} it is
-truly obvious what I am saying is true.
-
-\begin{sidewaystable} \centering
-\isucaption{This table shows almost nothing but is a
-sideways table and takes up a whole page by itself}
-\label{nothingelse}
-% Use: \begin{tabular{|lcc|} to put table in a box
-\begin{tabular}{lcc} \hline
-\textbf{Element} & \textbf{Control} & \textbf{Experimental} \\ \hline
-Moon Rings & 1.23 & 3.38 \\
-Moon Tides & 2.26 & 3.12 \\
-Moon Walk & 3.33 & 9.29 \\ \hline
-\end{tabular}
-\end{sidewaystable}
-
-\subsubsection{Parts of the hypothesis}
-
-Here one particular part of the hypothesis that is
-currently being explained is examined and particular
-elements of that part are given careful scrutiny. \cite{allen}, \cite{bruner}, \cite{struss}
-
-%\include{Body/ch1/ch1_main}
-%\include{Body/ch2/ch2_main}
-%\include{Body/ch3/ch3_main}
-%\include{Body/ch4/ch4_main}
-%\include{Body/ch5/ch5_main}
-%\include{Body/ch6/ch6_future_and_conclusions}
-
-%%%%%% bibliographies
-
-%\clearpage
-%% \nocite{*}
-%\unappendixtitle
-%\newpage
-%% % \phantomsection
-%\addcontentsline{toc}{chapter}{BIBLIOGRAPHY}
-%\section*{BIBLIOGRAPHY}
-%\bibliographystyle{apa}
-%\vspace{-20pt}
-%\begingroup
-%    \setlength{\bibsep}{14.5pt}
-%    \linespread{1}\selectfont
-%    \bibliography{master_bib}
-%\endgroup
-
-% Renders the citations but does not show the bibliography at the end of the thesis
-%\newsavebox\mytempbib
-%\savebox\mytempbib{\parbox{\textwidth}{\bibliography{master_bib}}}
+\printbibliography
 
 \clearpage
 \pagebreak
 
-%% Only within chapter appendix is allowed for Journal style writing
-%\include{Appendix/appendix1} % Instruction for single appendix look below
-%\include{Appendix/appendix2}
 \end{document}
-
-% use \isucaption{} for all captions of figures and tables, where the captions are not too long.
-
-% Use \isucaption[]{} with the square brackets for short caption of figure or table that goes into the list of tables and list of figures, and the curly brackets can have long captions which go with the figure/ table.
-
-% IMPORTANT NOTES
-% TABLE OF CONTENTS :
-% TOPIC 1:  If you need a page break follow the steps below
-% step1
-% check before which chapter in the table of contents you want a page break
-% step 2
-% go the folder "body". There open the chapter tex file that you noted needed page break in the table of contents..
-% step 3
-% insert  \addtocontents{toc}{\protect\newpage} before the first line i.e. before the line \chapter{RESULTS}.
-
-%%%%%%%%%%%%%%
-% use \isucaption{} for all captions of figures and tables, where the captions are not too long.
-
-% Use \isucaption[]{} with the square brackets for short caption of figure or table that goes into the list of tables and list of figures, and the curly brackets can have long captions which go with the figure/ table.
-
-%%%%%% Using sub figures 
-% %%% In preamble include : \usepackage{subfig}
-% \begin{figure}[htbp]
-% 	\centering
-% 	\subfloat[first caption.\label{fig:2a}]{\includegraphics[width=0.2\textwidth]{Images/dc5.jpg}}\hfill
-%     \subfloat[second caption.\label{fig:2b}] {\includegraphics[width=0.2\textwidth]{Images/dc5.jpg}}\hfill
-% 	\isucaption{Sub-figure test}
-% 	\label{fig:subfigure-test}
-% \end{figure}
-
-% Subfloat reference: Fig \ref{fig:2a}
-
-% Figure reference: Fig \ref{fig:subfigure-test}

@@ -2,9 +2,9 @@ book_filename: "thesis"
 rmd_files: [
   "index.Rmd",
   "Body/ch1/ch1_main.Rmd",
-  "Body/ch2/ch2_main.Rmd",
-  "Body/ch3/ch3_main.Rmd",
-  "Body/ch4/ch4_main.Rmd",
-  "Body/ch5/ch5_main.Rmd",
-  "Body/ch6/ch6_future_and_conclusions.Rmd"
+  "Body/ch2/ch2_main.Rmd"
+  # "Body/ch3/ch3_main.Rmd"
+  # "Body/ch4/ch4_main.Rmd",
+  # "Body/ch5/ch5_main.Rmd",
+  # "Body/ch6/ch6_future_and_conclusions.Rmd"
 ]
