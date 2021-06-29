@@ -1,3 +1,4 @@
+\refsection
 \chapter{PAPER 1 TITLE GOES HERE}
 
 \label{polymer_fibers}
@@ -10,10 +11,6 @@
 \section{Abstract}
 This is the text of my abstract that is part of the thesis itself.
 The abstract describes the work in the first paper general. You can use the same abstract as your paper here.
-
-<!-- %\pagebreak %remove if needed -->
-
-<!-- % Please include sections as the paper has, some of the following sections are meant as examples of what can be done, the bibliography should be made as given -->
 
 \section{Overview}
 
@@ -69,19 +66,8 @@ leading to a foregone conclusion.
 The conclusion of the paper goes here.
 \cite{cox}
 
-
-<!-- % Reference section comes before the appendix -->
-
-<!-- %\bibliographystyle{acm} % use for numbered citations along with options given in preamble. Look at the main thesis.tex file -->
-<!-- \bibliographystyle{apa} -->
-<!-- \bibliography{masterbib} -->
-<!-- \printbibliography -->
-<!-- \printbibliography[segment=\therefsegment] -->
-<!-- \printbibliography[segment=\therefsegment,heading=subbibliography] -->
-
 \section{References}
-\printbibliography[heading=none, section=\therefsection]
-
+\printbibliography[heading=none, section=2]
 
 \section{Appendix A: Appendix A Title Goes Here After The Colon}
 If there is an appendix that needs to go with the paper it can be as a section \cite{Aup91}
@@ -89,10 +75,9 @@ If there is an appendix that needs to go with the paper it can be as a section \
 \subsection{Procedure details}
 Details of the paper specific appendix procedures
 
-<!-- % This section may or may not be included -->
-
 \section{Appendix B: Appendix B Title Goes Here After The Colon}
 If there is an appendix that needs to go with the paper it can be as a section \cite{Aup91}
 
 \subsection{Procedure details}
 Details of the paper specific appendix procedures
+\endrefsection

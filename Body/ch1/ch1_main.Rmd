@@ -1,7 +1,7 @@
-
+\refsection
 \chapter{GENERAL INTRODUCTION}
 
-\label{general_fibers}
+\label{general_intro}
 
 This chapter will have the introduction to your thesis as a whole.
 
@@ -12,15 +12,19 @@ which will be used in my thesis.
 With more general information given here than really
 necessary.
 
-```{r}
+\begin{figure}[h!tb] \centering
+```{r echo=FALSE}
 plot(iris$Sepal.Length)
 ```
 
+\isucaption{Example of Rmarkdown based code chunk that includes R code}
+\label{code_figure}
+\end{figure}
 
 \section{Overview}
 
 Here initial concepts and conditions are explained and
-several hypothesis are mentioned in brief.
+several hypothesis are mentioned in brief. Figure \ref{code_figure} is an example of R code chunk generating a figure.
 
 \subsection{Hypothesis}
 
@@ -55,24 +59,9 @@ elements of that part are given careful scrutiny
 Here certain criteria are explained thus eventually
 leading to a foregone conclusion.
 
-<!-- \addbibresource{masterbib.bib} -->
 \section{References}
+\printbibliography[heading=none, section=1]
+\endrefsection
 
-\printbibliography[heading=none, section=\therefsection]
 
-<!-- \printbibliography[segment=\therefsegment,heading=subbibliography] -->
 
-<!-- \bibliographystyle{acm} % use for numbered citations along with options given in preamble. Look at the main thesis.tex file -->
-<!-- \bibliographystyle{apa} -->
-<!-- \bibliography{masterbib} -->
-
- <!-- \section{Bibliography} -->
- <!-- \bibliographystyle{apa} -->
- <!-- <!-- % \vspace{-20pt} --> 
- <!-- \begingroup -->
- <!--     \setlength{\bibsep}{13.2pt} -->
- <!--     \linespread{1}\selectfont -->
- <!--     \bibliography{master_bib} -->
- <!-- \endgroup -->
- <!-- \clearpage -->
- <!-- \pagebreak -->

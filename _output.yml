@@ -1,37 +1,7 @@
-bookdown::pdf_book:
-  includes:
-      in_header: preamble.tex
-      before_body: pref.tex
-      after_body: after.tex
-  # template: temp1.tex
-  keep_tex: yes
-  citation_package: biblatex
-  # biblatexoptions: [backend=biber, refsegment=chapter, hyperref=true, backref=true,
-  # bibencoding=utf8, style=authoryear, natbib=true, style=numeric-comp]
-  # toc: False
-  
-  # bibencoding=utf8, style=authoryear, natbib=true, style=numeric-comp
-  # biblatexoptions: [backend=biber, bibencoding=utf8, refsegment=chapter, natbib=true]
-  # latex_engine: pdflatex
-  # citation_package: natbib
-  # natbiboptions: [chapterbib, sectionbib]
-
-  # citation_package: "natbib"
-  # pdf_document:
-    # latex_engine: pdflatex
-  # includes:
-  #   natbiboptions: 
-  #     - sectionbib
-        
-    
-        
-   # - \usepackage[sectionbib]{chapterbib}
-  # includes:
-  #   in_header: 
-  #    - \usepackage{sectionbib}[natbib]
-     # - \bibliographystyle{apa}
-     # - \bibliography{master_bib.bib}
-     # - \usepackage{chapterbib}
-  # natbiboptions: 
-  #         - "sectionbib"
-  #         - "chapterbib"
+# bookdown::pdf_book:
+#   includes:
+#       in_header: preamble.tex
+#       before_body: pref.tex
+#       after_body: after.tex
+#   keep_tex: yes
+#   citation_package: biblatex

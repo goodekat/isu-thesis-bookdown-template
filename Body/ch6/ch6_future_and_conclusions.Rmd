@@ -1,3 +1,4 @@
+\refsection
 \chapter{GENERAL CONCLUSION}
 \label{future-work}
 
@@ -44,24 +45,7 @@ elements of that part are given careful scrutiny. \cite{allen}, \cite{bruner}, \
 <!-- % Below \subsubsection -->
 <!-- % Sectional commands: \paragraph and \subparagraph may also be used -->
 
+\section{References}
+\printbibliography[heading=none, section=6]
+\endrefsection
 
-<!-- %\section{Criteria Review} -->
-
-<!-- %Here certain criteria are explained thus eventually -->
-<!-- %leading to a foregone conclusion. -->
-
-<!-- %\bibliographystyle{acm} % use for numbered citations along with options given in preamble. Look at the main thesis.tex file -->
-<!-- \bibliographystyle{apa} -->
-<!-- \bibliography{master_bib} -->
-
-<!-- % \section{Bibliography} -->
-
-<!-- % \bibliographystyle{apa} -->
-<!-- % % \vspace{-20pt} -->
-<!-- % \begingroup -->
-<!-- %     \setlength{\bibsep}{13.2pt} -->
-<!-- %     \linespread{1}\selectfont -->
-<!-- %     \bibliography{master_bib} -->
-<!-- % \endgroup -->
-<!-- % \clearpage -->
-<!-- % \pagebreak -->

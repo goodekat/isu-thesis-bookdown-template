@@ -3,34 +3,17 @@ site: bookdown::bookdown_site
 output:
   bookdown::pdf_book:
     includes:
-      in_header: preamble.tex
-      before_body: pref.tex
-      after_body: after.tex
+      in_header: template-preamble.tex
+      before_body: template-preface.tex
+      after_body: template-after-chapters.tex
     keep_tex: yes
     citation_package: biblatex
 documentclass: isuthesis
 classoption:
   - notitlepage
 fontsize: 12pt
-# bibliography: masterbib.bib
-# biblio-style: apa
-# nocite: '@*'
-# biblatexoptions: [refsegment=chapter]
-# biblatexoptions: [refsection=chapter, backref=false]
-# , hyperref=true, backref=FALSE, backend=biber, 
-#   bibencoding=utf8]
-  # , style=authoryear, natbib=true, style=numeric-comp]
 toc: False
-# link-citations: yes
 ---
-
-<!-- # biblatexoptions: [refsegment=chapter] -->
-
-<!--  backref=true, style=authoryear, natbib=true, style=numeric-comp] -->
-
-```{r echo=FALSE}
-Sys.setenv(RSTUDIO_PDFLATEX = "latexmk")
-```
 
 ```{r setup, include = FALSE}
 # Global R options
@@ -60,8 +43,8 @@ knitr::opts_chunk$set(
 # Other options
 knitr::opts_knit$set(eval.after = "fig.cap")
 
-
-
+# Use latexmk; might need to be installed in the native latex distribution like MiKTeX
+Sys.setenv(RSTUDIO_PDFLATEX = "latexmk")
 
 ```
 
