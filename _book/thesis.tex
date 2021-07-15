@@ -5,8 +5,8 @@
 \documentclass[
   12pt,
   notitlepage]{isuthesis}
+\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
@@ -40,7 +40,8 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
-\usepackage{longtable,booktabs}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
 \makeatletter
@@ -49,7 +50,7 @@
 % Allow footnotes in longtable head/foot
 \IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
 \makesavenoteenv{longtable}
-\usepackage{graphicx,grffile}
+\usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -83,6 +84,9 @@
 
 \addbibresource{masterbib.bib}
 
+% Set the spacing within a single bibliography entry and between two bibliography entries
+\renewcommand{\bibfont}{\setstretch{1}\selectfont}
+\setlength\bibitemsep{13.2pt}
 
 %%%%%%%%%%%%%%%%%%%%%% Hyperref settings original
 
@@ -194,6 +198,9 @@
 
 \usepackage{amssymb}
 \usepackage[intoc, english]{nomencl}
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
 \usepackage[]{biblatex}
 
 \author{}
@@ -255,6 +262,7 @@
 
 \clearpage
 \pagebreak
+
 
 \refsection
 \chapter{GENERAL INTRODUCTION}
