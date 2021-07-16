@@ -63,5 +63,3 @@ leading to a foregone conclusion.
 \printbibliography[heading=none, section=1]
 \endrefsection
 
-
-

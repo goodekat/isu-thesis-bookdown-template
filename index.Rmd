@@ -11,7 +11,7 @@ output:
 documentclass: isuthesis
 classoption:
   - notitlepage
-fontsize: 12pt
+fontsize: 11pt
 toc: False
 ---
 

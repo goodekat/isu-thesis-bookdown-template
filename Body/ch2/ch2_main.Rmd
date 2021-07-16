@@ -80,4 +80,6 @@ If there is an appendix that needs to go with the paper it can be as a section \
 
 \subsection{Procedure details}
 Details of the paper specific appendix procedures
+
+
 \endrefsection

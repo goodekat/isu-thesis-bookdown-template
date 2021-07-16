@@ -11,13 +11,14 @@
 \usepackage{amssymb, amsmath, mathrsfs}
 
 %%%%%%%%%%%%% Bibligraphy using Biblatex
-\usepackage[backend=biber, bibencoding=utf8, style=apa, natbib=true, backref=false, style=apa]{biblatex}
+\usepackage[backend=biber, bibencoding=utf8,style=apa, natbib=true, backref=true, style=apa]{biblatex}
 
 \addbibresource{masterbib.bib}
 
 % Set the spacing within a single bibliography entry and between two bibliography entries
 \renewcommand{\bibfont}{\setstretch{1}\selectfont}
 \setlength\bibitemsep{13.2pt}
+% \setlength\bibitemsep{\baselineskip}
 
 %%%%%%%%%%%%%%%%%%%%%% Hyperref settings original
 
@@ -103,7 +104,10 @@
 % Method 2 of doing this
 \usepackage[all]{nowidow}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\usepackage{showframe} % show writing space
+\patchcmd{\thebibliography}{\clubpenalty4000}{\clubpenalty10000}{}{}     % no orphans
+\patchcmd{\thebibliography}{\widowpenalty4000}{\widowpenalty10000}{}{}   % no widows
+\patchcmd{\bibsetup}{\interlinepenalty=5000}{\interlinepenalty=10000}{}{}
 %%% control bibliography spacings
 % \newlength{\bibitemsep}\setlength{\bibitemsep}{\baselineskip}
 % % plus .05\baselineskip minus .05\baselineskip}
@@ -127,5 +131,4 @@
 \geometry{letterpaper, left=1in, top=1in, right=1in, bottom=1in, includehead=true} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{amssymb}
 \usepackage[intoc, english]{nomencl}

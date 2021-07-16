@@ -42,9 +42,6 @@ currently being explained is examined and particular
 elements of that part are given careful scrutiny. \cite{allen}, \cite{bruner}, \cite{struss}
 
 
-<!-- % Below \subsubsection -->
-<!-- % Sectional commands: \paragraph and \subparagraph may also be used -->
-
 \section{References}
 \printbibliography[heading=none, section=6]
 \endrefsection
